@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mdb.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <style>
+     body {
+  background-color: #6b747e;
+  padding-top: 50px;
+}
+
+/* Equalize the card heights */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 350px; /* Set a fixed height for the card */
+  border-radius: 15px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensures content stays inside the rounded corners */
+}
+
+/* Card title and body text */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-body {
+  text-align: center;
+  flex-grow: 1;
+  padding: 10px; /* Add some padding to the body */
+}
+
+/* Project description text - make the font size smaller */
+.card-text {
+  font-size: 0.9rem; /* Smaller font size for project description */
+  color: #6c757d; /* Light color for the description text */
+  margin-bottom: 15px; /* Space between description and button */
+}
+
+/* Hover effect on card */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Button full-width */
+.btn-primary {
+  width: 50%;
+  padding: 10px; /* Make button a bit taller for better alignment */
+  font-size: 1rem; /* Button text size */
+}
+
+  </style>
+  
+   
+</head>
+<body style="background-color: rgb(145, 177, 139);">
+
+  <div class="container">
+    <h2 class="text-center mb-5">My Web Development Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Portfolio Project Card -->
+      <div class="col">
+        <div class="card">
+          <img src="port.jpg" class="card-img-top" alt="Portfolio">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio</h5>
+            <p class="card-text">A personal website showcasing my skills, experience, and projects.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quiz Project Card -->
+      <div class="col">
+        <div class="card">
+          <img src="quize.jpg" class="card-img-top" alt="Quiz">
+          <div class="card-body">
+            <h5 class="card-title">Quiz</h5>
+            <p class="card-text">
+              <br>An interactive web application that allows users to take quizzes on various topics.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- To-Do List Project Card -->
+      <div class="col">
+        <div class="card">
+          <img src="todolist.jpg" class="card-img-top" alt="To-Do List">
+          <div class="card-body">
+            <h5 class="card-title">To-Do List</h5>
+            <p class="card-text">A productivity tool that helps users manage their tasks.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrapjs.js"></script>
+  <script src="jquery.js"></script>
+  <script src="mdbjs.js"></script>
+  <script src="popper.js"></script>
+  
+</body>
+</html>
