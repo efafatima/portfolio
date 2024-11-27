@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+      /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9cb891;
+    color: #333;
+    line-height: 1.6;
+}
+
+section#contact-form {
+    background-color: #b18c55;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #07374a;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.input-container {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #07374a;
+    margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #25b79f;
+}
+
+button {
+    background-color: #25b79f;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1f9a7f;
+}
+
+p#errorMessage {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section#contact-form {
+        padding: 3rem 1.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section id="contact-form">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+          <!-- Name Field -->
+          <div class="input-container">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+      
+          <!-- Email Field -->
+          <div class="input-container">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+      
+          <!-- Message Field -->
+          <div class="input-container">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+      
+          <!-- Submit Button -->
+          <button type="submit">Send Message</button>
+          <p id="errorMessage">Please fill out all fields correctly.</p>
+        </form>
+      </section>
+
+    <script>
+      // Form Validation
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Reset error message
+        const errorMessage = document.getElementById('errorMessage');
+        errorMessage.style.display = 'none';
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Regular expression for email validation
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        // Validate form fields
+        if (name === '' || email === '' || message === '') {
+          errorMessage.textContent = 'All fields are required.';
+          errorMessage.style.display = 'block';
+          return;
+        }
+
+        if (!emailPattern.test(email)) {
+          errorMessage.textContent = 'Please enter a valid email address.';
+          errorMessage.style.display = 'block';
+          return;
+        }
+
+        // If validation passes
+        alert('Your message has been sent successfully!');
+        // Reset form fields
+        document.getElementById('contactForm').reset();
+      });
+    </script>
+</body>
+</html>
