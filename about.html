@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    /* General Body and Font Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #a8a9ac;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 50px 20px;
+      background-color: #7e3737;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row-reverse; /* Image on the left, content on the right */
+      justify-content: space-between; /* Add space between image and content */
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .about-content {
+      width: 55%; /* Adjusted width for content */
+      padding-left: 30px; /* Space between content and image */
+    }
+
+    .about-image {
+      width: 40%; /* Allocate space for the image */
+      text-align: right;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      font-size: 1.3rem;
+      color: #16a085;
+      margin-bottom: 20px;
+    }
+
+    .about-description {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #7f8c8d;
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+
+    .btn {
+      background-color: #16a085;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1abc9c;
+    }
+
+    .profile-img {
+      width: 200px; /* Set a fixed size for the circular image */
+      height: 200px;
+      border-radius: 50%; /* Makes the image circular */
+      object-fit: cover; /* Maintains aspect ratio */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+      margin-bottom: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack content and image vertically */
+        width: 90%;
+      }
+
+      .about-content {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 20px;
+      }
+
+      .about-image {
+        width: 100%;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="about" class="about-section">
+    <div class="container">
+      <!-- Image on the left -->
+      <div class="about-image">
+        <img src="smile.jpg" alt="Affifa" class="profile-img">
+      </div>
+      <!-- Content on the right -->
+      <div class="about-content">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A passionate front-end developer</p>
+        <p class="about-description">
+          Hi, I'm Affifa, a front-end developer with over 5 years of experience. I specialize in creating responsive, user-friendly websites using modern web technologies like HTML, CSS, JavaScript, and frameworks such as Bootstrap. I'm passionate about crafting digital experiences that are not only functional but also visually appealing. Let's work together to build amazing things!
+        </p>
+        <button class="btn">Contact Me</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
