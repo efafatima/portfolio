@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #555;
+            cursor: default;
+        }
+
+        .logo span {
+            color: #7d2ae8;
+        }
+
+        .navigation {
+            margin-left: -300px;
+        }
+
+        .navigation a {
+            font-size: 1.1em;
+            color: #555;
+            text-decoration: none;
+            margin-right: 40px;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .navigation a:hover {
+            color: #7d2ae8;
+        }
+
+        .btn-talk {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 35px;
+            background: #7d2ae8;
+            border-radius: 10px;
+            border: 2px solid #7d2ae8;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .btn-talk:hover {
+            color: #7d2ae8;
+            background: transparent;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 30px 100px;
+        }
+
+        .content {
+            max-width: 500px;
+            color: #555;
+        }
+
+        .content h2 {
+            font-size: 3em;
+        }
+
+        .content h2 span {
+            color: #7d2ae8;
+        }
+
+        .content h4 {
+            font-size: 2em;
+        }
+
+        .content p {
+            padding: 10px 0 40px 0;
+        }
+
+        .btn-group a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 40px;
+            background: #7d2ae8;
+            border-radius: 10px;
+            border: 2px solid #7d2ae8;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .btn-group a:hover:nth-child(1) {
+            color: #7d2ae8;
+            background: transparent;
+        }
+
+        .btn-group a:nth-child(2) {
+            color: #7d2ae8;
+            background: transparent;
+            margin-left: 30px;
+            padding: 10px 30px;
+        }
+
+        .btn-group a:hover:nth-child(2) {
+            color: #fff;
+            background: #7d2ae8;
+        }
+
+        header {
+            background: #98FF98;
+        }
+
+
+        .image-box {
+            flex: 1;
+            height: 80%;
+            /* background-image: url('smile.jpg'); */
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+
+        }
+
+    /* Input and Textarea Styling */
+    #contactForm input:focus,
+    #contactForm textarea:focus {
+        border-color: #25b79f;
+        box-shadow: 0 0 8px rgba(37, 183, 159, 0.5);
+    }
+
+    /* Submit Button Hover */
+    #contactForm button:hover {
+        background-color: #1a8c78;
+        transform: scale(1.05);
+    }
+
+    /* Submit Button Active */
+    #contactForm button:active {
+        transform: scale(0.98);
+    }
+
+    /* Form Section Hover Effect */
+    #contact-form:hover {
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+     <!-- Bootstrap Icons CDN -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+   
+   <header style="background-color: #C0C0C0; color: black; padding: 20px; text-align: center;">
+    <h2 class="logo"><span>Affifa</span></h2>
+    <nav class="navigation">
+        <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+        <a href="about.html"><i class="bi bi-person"></i> About</a>
+        <a href="skills.html"><i class="bi bi-gear"></i> Skills</a>
+        <a href="project.html"><i class="bi bi-file-earmark-code"></i> Projects</a>
+        <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+    </nav>
+    <a href="#" class="btn-talk btn btn-primary">Let's Talk</a>
+</header>
+
+    <section class="home" style="display: flex; align-items: center; justify-content: space-between; background-color: #808686; padding: 50px 20px;">
+
+        <div class="content" style="flex: 1; text-align: left; color: #6c6d64;">
+            <h2 style="font-size: 2.5rem; color: #2d2d2d;">Hi, I'm <span style="color: #330404;">Affifa</span></h2>
+            <h4 style="font-size: 1.8rem; color: #751010;">Frontend Developer</h4>
+            <p style="font-size: 1.1rem; color: #2c1414;">I am specialized in creating responsive and user-friendly websites with modern web technologies</p>
+            <div class="btn-group" style="margin-top: 20px;">
+                <a href="#" style="background-color: #4caf50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px; font-weight: bold;">Contact Me</a>
+                <a href="#" style="background-color: #2d2d2d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">See Skills</a>
+            </div>
+        </div>
+    
+        <!-- Image in Circle -->
+        <div class="image-box" style="flex: 1; background-image: url('smile.jpg'); background-size: cover;
+         background-position: center; height: 450px; width: 100px; border-radius: 50%;"></div>
+    
+    </section>
+    
+    
+    
+    <section id="about" style="padding: 50px 20px; background-color: #b69a9a; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-top: 50px; text-align: left;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 80%; margin: 0 auto;">
+          <!-- Image on the left -->
+          <div style="width: 40%; text-align: right;">
+            <img src="smile.jpg" alt="Affifa" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+          </div>
+          <!-- Content on the right -->
+          <div style="width: 55%; padding-left: 30px;">
+            <h2 style="font-size: 2.5rem; font-weight: bold; color: #2c3e50; margin-bottom: 15px;">About Me</h2>
+            <p style="font-size: 1.3rem; color: #16a085; margin-bottom: 20px;">A passionate front-end developer</p>
+            <p style="font-size: 1rem; line-height: 1.8; color: #18191a; margin-bottom: 25px; text-align: justify;">
+              Hi, I'm Affifa, a front-end developer with over 5 years of experience. I specialize in creating responsive, user-friendly websites using modern web technologies like HTML, CSS, JavaScript, and frameworks such as Bootstrap. I'm passionate about crafting digital experiences that are not only functional but also visually appealing. Let's work together to build amazing things!
+            </p>
+            <button style="background-color: #16a085; color: white; border: none; padding: 12px 25px; font-size: 1.1rem; cursor: pointer; border-radius: 5px; transition: background-color 0.3s ease;">Contact Me</button>
+          </div>
+        </div>
+      </section>
+
+       <section class="skills-section" style="padding: 60px 20px; background-color: #b3bebe; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-radius: 10px; margin: 40px auto; max-width: 90%;">
+        <div class="container" style="max-width: 1000px; margin: 0 auto;">
+          <h1 style="font-size: 2.8rem; margin-bottom: 30px; color: #2d2d2d; text-transform: uppercase; letter-spacing: 1px;">My Skills</h1>
+          <div class="skills" style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 40px;">
+            <div class="skill" style="text-align: center; width: 150px; padding: 20px; border-radius: 10px; background: linear-gradient(145deg, #f0f0f0, #d9d9d9); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out; border: 1px solid #ddd;">
+              <i class="fab fa-html5 skill-icon" style="font-size: 3.5rem; margin-bottom: 15px; color: #e34c26; transition: color 0.3s ease;"></i>
+              <h2 style="font-size: 1.6rem; margin-bottom: 10px; color: #333; font-weight: bold;">HTML</h2>
+              <span class="badge" style="display: inline-block; padding: 8px 15px; background-color: #4caf50; color: #fff; border-radius: 20px; font-size: 1rem; font-weight: bold; margin-top: 10px; transition: background-color 0.3s ease;">Expert</span>
+            </div>
+            <div class="skill" style="text-align: center; width: 150px; padding: 20px; border-radius: 10px; background: linear-gradient(145deg, #f0f0f0, #d9d9d9); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out; border: 1px solid #ddd;">
+              <i class="fab fa-css3-alt skill-icon" style="font-size: 3.5rem; margin-bottom: 15px; color: #1572b6; transition: color 0.3s ease;"></i>
+              <h2 style="font-size: 1.6rem; margin-bottom: 10px; color: #333; font-weight: bold;">CSS</h2>
+              <span class="badge" style="display: inline-block; padding: 8px 15px; background-color: #4caf50; color: #fff; border-radius: 20px; font-size: 1rem; font-weight: bold; margin-top: 10px; transition: background-color 0.3s ease;">Advanced</span>
+            </div>
+            <div class="skill" style="text-align: center; width: 150px; padding: 20px; border-radius: 10px; background: linear-gradient(145deg, #f0f0f0, #d9d9d9); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out; border: 1px solid #ddd;">
+              <i class="fab fa-js-square skill-icon" style="font-size: 3.5rem; margin-bottom: 15px; color: #f7df1e; transition: color 0.3s ease;"></i>
+              <h2 style="font-size: 1.6rem; margin-bottom: 10px; color: #333; font-weight: bold;">JavaScript</h2>
+              <span class="badge" style="display: inline-block; padding: 8px 15px; background-color: #4caf50; color: #fff; border-radius: 20px; font-size: 1rem; font-weight: bold; margin-top: 10px; transition: background-color 0.3s ease;">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <section style="padding: 50px 0; background-color: rgb(145, 177, 139);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+          <h2 class="text-center mb-5" style="font-size: 2rem; color: #333;">My Web Development Projects</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Portfolio Project Card -->
+            <div class="col" style="margin-bottom: 20px;">
+              <div class="card" style="display: flex; flex-direction: column; height: 350px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="port.jpg" class="card-img-top" alt="Portfolio" style="height: 200px; object-fit: cover;">
+                <div class="card-body" style="text-align: center; flex-grow: 1; padding: 10px;">
+                  <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold; color: #333;">Portfolio</h5>
+                  <p class="card-text" style="font-size: 0.9rem; color: #6c757d; margin-bottom: 15px;">A personal website showcasing my skills, experience, and projects.</p>
+                  <a href="#" class="btn btn-primary" style="width: 50%; padding: 10px; font-size: 1rem; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px;">View Project</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Quiz Project Card -->
+            <div class="col" style="margin-bottom: 20px;">
+              <div class="card" style="display: flex; flex-direction: column; height: 350px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="quize.jpg" class="card-img-top" alt="Quiz" style="height: 200px; object-fit: cover;">
+                <div class="card-body" style="text-align: center; flex-grow: 1; padding: 10px;">
+                  <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold; color: #333;">Quiz</h5>
+                  <p class="card-text" style="font-size: 0.9rem; color: #6c757d; margin-bottom: 15px;">An interactive web application that allows users to take quizzes on various topics.</p>
+                  <a href="#" class="btn btn-primary" style="width: 50%; padding: 10px; font-size: 1rem; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px;">View Project</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- To-Do List Project Card -->
+            <div class="col" style="margin-bottom: 20px;">
+              <div class="card" style="display: flex; flex-direction: column; height: 350px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="todolist.jpg" class="card-img-top" alt="To-Do List" style="height: 200px; object-fit: cover;">
+                <div class="card-body" style="text-align: center; flex-grow: 1; padding: 10px;">
+                  <h5 class="card-title" style="font-size: 1.2rem; font-weight: bold; color: #333;">To-Do List</h5>
+                  <p class="card-text" style="font-size: 0.9rem; color: #6c757d; margin-bottom: 15px;">A productivity tool that helps users manage their tasks.</p>
+                  <a href="#" class="btn btn-primary" style="width: 50%; padding: 10px; font-size: 1rem; background-color: #007bff; color: white; text-align: center; text-decoration: none; border-radius: 5px;">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    
+     <section id="contact-form" style="background-color: #b18c55; padding: 4rem 2rem; text-align: center; margin: 50px auto; max-width: 700px; border-radius: 10px; box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);">
+    <h2 style="color: #07374a; font-size: 2.5rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px;">Contact Me</h2>
+    <form id="contactForm">
+        <!-- Name Field -->
+        <div class="input-container" style="margin-bottom: 1.5rem; text-align: left;">
+            <label for="name" style="display: block; font-size: 1rem; font-weight: bold; color: #07374a; margin-bottom: 0.5rem;">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 0.8rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease;">
+        </div>
+
+        <!-- Email Field -->
+        <div class="input-container" style="margin-bottom: 1.5rem; text-align: left;">
+            <label for="email" style="display: block; font-size: 1rem; font-weight: bold; color: #07374a; margin-bottom: 0.5rem;">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 0.8rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease;">
+        </div>
+
+        <!-- Message Field -->
+        <div class="input-container" style="margin-bottom: 1.5rem; text-align: left;">
+            <label for="message" style="display: block; font-size: 1rem; font-weight: bold; color: #07374a; margin-bottom: 0.5rem;">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required style="width: 100%; padding: 0.8rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease;"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" style="background-color: #25b79f; color: #ffffff; font-size: 1.1rem; padding: 0.8rem 2rem; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, transform 0.2s;">Send Message</button>
+        <p id="errorMessage" style="color: #d9534f; font-size: 0.9rem; margin-top: 1rem; display: none;">Please fill out all fields correctly.</p>
+    </form>
+</section>
+
+    <script>
+      // Form Validation
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Reset error message
+        const errorMessage = document.getElementById('errorMessage');
+        errorMessage.style.display = 'none';
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Regular expression for email validation
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        // Validate form fields
+        if (name === '' || email === '' || message === '') {
+          errorMessage.textContent = 'All fields are required.';
+          errorMessage.style.display = 'block';
+          return;
+        }
+
+        if (!emailPattern.test(email)) {
+          errorMessage.textContent = 'Please enter a valid email address.';
+          errorMessage.style.display = 'block';
+          return;
+        }
+
+        // If validation passes
+        alert('Your message has been sent successfully!');
+        // Reset form fields
+        document.getElementById('contactForm').reset();
+      });
+    </script>
+    <footer style="background-color: #07374a; color: #ffffff; padding: 3rem 2rem; text-align: center;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="footer-content" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Connect with Me</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Feel free to reach out or follow me on social media.</p>
+            
+            <!-- Social Media Links -->
+            <div class="social-icons" style="font-size: 2rem;">
+                <a href="https://www.linkedin.com" target="_blank" style="color: #ffffff; margin: 0 15px; text-decoration: none;">
+                    <i class="bi bi-linkedin"></i> <!-- Bootstrap Icon for LinkedIn -->
+                </a>
+                <a href="https://github.com" target="_blank" style="color: #ffffff; margin: 0 15px; text-decoration: none;">
+                    <i class="bi bi-github"></i> <!-- Bootstrap Icon for GitHub -->
+                </a>
+                <a href="https://www.twitter.com" target="_blank" style="color: #ffffff; margin: 0 15px; text-decoration: none;">
+                    <i class="bi bi-twitter"></i> <!-- Bootstrap Icon for Twitter -->
+                </a>
+                <a href="https://www.instagram.com" target="_blank" style="color: #ffffff; margin: 0 15px; text-decoration: none;">
+                    <i class="bi bi-instagram"></i> <!-- Bootstrap Icon for Instagram -->
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Text -->
+        <div class="footer-text" style="font-size: 0.9rem;">
+            <p>&copy; 2024 Affifa | All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+</body>
+
+</html>
