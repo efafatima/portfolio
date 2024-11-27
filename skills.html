@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #665353;
+  color: #333;
+}
+
+.skills-section {
+  padding: 60px 20px;
+  background-color: #b3bebe;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 90%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skill {
+  text-align: center;
+  width: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ddd;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1), 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.skill h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.skill:hover .skill-icon {
+  color: #4caf50; /* Change color on hover */
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 200px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <div class="container">
+      <h1>My Skills</h1>
+      <div class="skills">
+        <div class="skill">
+          <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
+          <h2>HTML</h2>
+          <span class="badge">Expert</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+          <h2>CSS</h2>
+          <span class="badge">Advanced</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-js-square skill-icon" style="color: #f7df1e;"></i>
+          <h2>JavaScript</h2>
+          <span class="badge">Intermediate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
